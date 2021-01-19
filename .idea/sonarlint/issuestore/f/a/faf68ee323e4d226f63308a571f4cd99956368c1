@@ -1,0 +1,13 @@
+
+I
+java:S1874J",Remove this use of "Date"; it is deprecated.(Õª“î8ºâ¾ñ.
+Š
+java:S1192s"hDefine a constant instead of duplicating this literal "ON seller.DepartmentId = department.Id " 3 times.(İíÏíùÿÿÿÿ8ºâ¾ñ.
+I
+java:S1874%",Remove this use of "Date"; it is deprecated.(Õª“î8ºâ¾ñ.
+€
+java:S1192r"cDefine a constant instead of duplicating this literal "FROM seller INNER JOIN department " 3 times.(õ³›ç8ºâ¾ñ.
+k
+java:S1192”"MDefine a constant instead of duplicating this literal "DepartmentId" 5 times.(ÇÖóÑ8ºâ¾ñ.
+‰
+java:S1192q"lDefine a constant instead of duplicating this literal "SELECT seller.*,department.Name as DepName " 3 times.(À¨ïı8ºâ¾ñ.
