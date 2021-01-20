@@ -21,10 +21,6 @@ I
 src/application/Main.java,8\d\8dd39b27bbecf58d30bde4cb59516e5bb7832dd9
 N
 src/model/entities/Seller.java,d\3\d33041a4c493273e337c2715df20a3f290539825
-A
-src/db.properties,b\2\b2bb421eba595f925073d3db78bb38a8ce94b3a8
->
-src/tables.sql,a\a\aa3141bdf037113694d1075c0b1b89bc5104e37e
 G
 src/db/DbException.java,7\c\7c4435bdfa4809ad9c3e1494f83162f6664f92ba
 P
@@ -39,3 +35,16 @@ Q
 !src/model/dao/impl/SellerDao.java,f\a\faf68ee323e4d226f63308a571f4cd99956368c1
 U
 %src/model/dao/impl/DepartmentDao.java,d\8\d89ed3c4b57857f9e79f9931bc2aad70144eca0d
+=
+db.properties,3\b\3b8c33088fa60dfa967fdedbf4c75fa52fdece9a
+:
+
+tables.sql,f\e\fe4b61d4bf809efa817a67d60bbbdf37b02fe059
+K
+src/gui/DepartmentForm.fxml,0\e\0e0df1f0bf1d8280b07c6ae226f5282ec6dcf99a
+G
+src/gui/util/Utils.java,0\e\0e1e05858d34d43c152b4a1fdd0f314dfedc7b8a
+Y
+)src/gui/listeners/DataChangeListener.java,4\6\46cdbb161454cb1b73a2f06ebba7a0004d1079ea
+U
+%src/gui/DepartmentFormController.java,7\9\79635303ec870378237c2895d0a5e1df91f4c6bb
