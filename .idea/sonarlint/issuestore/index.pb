@@ -48,3 +48,11 @@ Y
 )src/gui/listeners/DataChangeListener.java,4\6\46cdbb161454cb1b73a2f06ebba7a0004d1079ea
 U
 %src/gui/DepartmentFormController.java,7\9\79635303ec870378237c2895d0a5e1df91f4c6bb
+]
+-src/model/exceptions/ValidationException.java,a\b\abfd4722a97d79b878b2ade761baffcde89f7945
+U
+%src/model/services/SellerService.java,0\a\0ae4cc55f402cb04c96f183f50207a0d9a43ab89
+Q
+!src/gui/SellerListController.java,a\c\aca6845ab394d6c420dbaeb6a70fdeff931d6bf5
+G
+src/gui/SellerList.fxml,5\f\5f128e39df7acafb20f1b99086cde2765b20cbc2

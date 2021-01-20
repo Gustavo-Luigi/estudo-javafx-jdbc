@@ -1,7 +1,6 @@
 package gui;
 
 import application.Main;
-import db.DbException;
 import db.DbIntegrityException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
