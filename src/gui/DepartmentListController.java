@@ -23,7 +23,6 @@ import model.services.DepartmentService;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -44,7 +43,8 @@ public class DepartmentListController implements Initializable {
     @FXML
     public void onBtnNewAction(ActionEvent event) {
         Stage parentStage = Utils.currentStage(event);
-        createDialogForm("/gui/DepartmentForm.fxml", parentStage);
+        Department department = new Department();
+        createDialogForm(department, "/gui/DepartmentForm.fxml", parentStage);
     }
 
     public void setDepartmentService(DepartmentService service) {
@@ -53,11 +53,7 @@ public class DepartmentListController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<String> pathToView = Arrays.asList(url.getFile().split("/"));
-        String viewFileName = pathToView.get(pathToView.size() - 1);
-        if(viewFileName.equals("DepartmentList.fxml")) {
             initializeNodes();
-        }
     }
 
     private void initializeNodes() {
@@ -80,10 +76,15 @@ public class DepartmentListController implements Initializable {
         tableViewDepartment.setItems(obsList);
     }
 
-    public void createDialogForm(String absoluteName, Stage parentStage) {
+    public void createDialogForm(Department department, String absoluteName, Stage parentStage) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
             Pane pane = loader.load();
+
+            DepartmentFormController controller = loader.getController();
+            controller.setDepartment(department);
+            controller.setService(new DepartmentService());
+            controller.updateFormData();
 
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Enter Department Data");
