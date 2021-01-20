@@ -19,6 +19,7 @@ import model.services.DepartmentService;
 import model.services.SellerService;
 
 import java.net.URL;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
@@ -91,6 +92,24 @@ public class SellerFormController implements Initializable {
         }
         seller.setName(txtName.getText());
 
+        if (txtEmail.getText() == null || txtEmail.getText().trim().equals("")) {
+            exception.addError("Email", "Field can't be empty");
+        }
+        seller.setEmail(txtEmail.getText());
+
+        if (dpBirthDate.getValue() == null) {
+            exception.addError("Birth Date", "Field can't be empty");
+        }
+        Instant instant = Instant.from(dpBirthDate.getValue().atStartOfDay(ZoneId.systemDefault()));
+        seller.setBirthDate(Date.from(instant));
+
+        if (txtBaseSalary.getText() == null || txtBaseSalary.getText().trim().equals("")) {
+            exception.addError("Base Salary", "Field can't be empty");
+        }
+        seller.setBaseSalary(Utils.tryParseToDouble(txtBaseSalary.getText()));
+
+        seller.setDepartment(comboBoxDepartment.getValue());
+
         if (exception.getErrors().size() > 0) {
             throw exception;
         }
@@ -162,6 +181,23 @@ public class SellerFormController implements Initializable {
 
         if (fields.contains("Name")) {
             labelErrorName.setText(errors.get("Name"));
+        } else {
+            labelErrorName.setText(errors.get(""));
+        }
+        if (fields.contains("Email")) {
+            labelErrorName.setText(errors.get("Email"));
+        } else {
+            labelErrorName.setText(errors.get(""));
+        }
+        if (fields.contains("Base Salary")) {
+            labelErrorName.setText(errors.get("Base Salary"));
+        } else {
+            labelErrorName.setText(errors.get(""));
+        }
+        if (fields.contains("Birth Date")) {
+            labelErrorName.setText(errors.get("Birth Date"));
+        } else {
+            labelErrorName.setText(errors.get(""));
         }
     }
 
